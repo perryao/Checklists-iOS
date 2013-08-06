@@ -21,6 +21,7 @@
 		27AFBAE617B065D5001ECA2C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27AFBAC817B065D5001ECA2C /* UIKit.framework */; };
 		27AFBAEE17B065D5001ECA2C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27AFBAEC17B065D5001ECA2C /* InfoPlist.strings */; };
 		27AFBAF017B065D5001ECA2C /* ChecklistsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AFBAEF17B065D5001ECA2C /* ChecklistsTests.m */; };
+		27AFBAFD17B076E1001ECA2C /* ChecklistItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AFBAFC17B076E1001ECA2C /* ChecklistItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		27AFBAEB17B065D5001ECA2C /* ChecklistsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ChecklistsTests-Info.plist"; sourceTree = "<group>"; };
 		27AFBAED17B065D5001ECA2C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		27AFBAEF17B065D5001ECA2C /* ChecklistsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChecklistsTests.m; sourceTree = "<group>"; };
+		27AFBAFB17B076E1001ECA2C /* ChecklistItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChecklistItem.h; sourceTree = "<group>"; };
+		27AFBAFC17B076E1001ECA2C /* ChecklistItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChecklistItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +115,10 @@
 		27AFBACA17B065D5001ECA2C /* Checklists */ = {
 			isa = PBXGroup;
 			children = (
-				27AFBAD317B065D5001ECA2C /* ChecklistsAppDelegate.h */,
-				27AFBAD417B065D5001ECA2C /* ChecklistsAppDelegate.m */,
+				27AFBAFE17B076EA001ECA2C /* Model */,
+				27AFBAFA17B066AF001ECA2C /* ChecklistsAppDelegate */,
+				27AFBAF917B066A3001ECA2C /* ChecklistsViewController */,
 				27AFBAD617B065D5001ECA2C /* Main.storyboard */,
-				27AFBAD917B065D5001ECA2C /* ChecklistsViewController.h */,
-				27AFBADA17B065D5001ECA2C /* ChecklistsViewController.m */,
 				27AFBADC17B065D5001ECA2C /* Images.xcassets */,
 				27AFBACB17B065D5001ECA2C /* Supporting Files */,
 			);
@@ -150,6 +152,33 @@
 				27AFBAEC17B065D5001ECA2C /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		27AFBAF917B066A3001ECA2C /* ChecklistsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				27AFBAD917B065D5001ECA2C /* ChecklistsViewController.h */,
+				27AFBADA17B065D5001ECA2C /* ChecklistsViewController.m */,
+			);
+			name = ChecklistsViewController;
+			sourceTree = "<group>";
+		};
+		27AFBAFA17B066AF001ECA2C /* ChecklistsAppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				27AFBAD317B065D5001ECA2C /* ChecklistsAppDelegate.h */,
+				27AFBAD417B065D5001ECA2C /* ChecklistsAppDelegate.m */,
+			);
+			name = ChecklistsAppDelegate;
+			sourceTree = "<group>";
+		};
+		27AFBAFE17B076EA001ECA2C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				27AFBAFB17B076E1001ECA2C /* ChecklistItem.h */,
+				27AFBAFC17B076E1001ECA2C /* ChecklistItem.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +282,7 @@
 				27AFBAD117B065D5001ECA2C /* main.m in Sources */,
 				27AFBAD517B065D5001ECA2C /* ChecklistsAppDelegate.m in Sources */,
 				27AFBADB17B065D5001ECA2C /* ChecklistsViewController.m in Sources */,
+				27AFBAFD17B076E1001ECA2C /* ChecklistItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +408,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Checklists/Checklists-Prefix.pch";
 				INFOPLIST_FILE = "Checklists/Checklists-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -391,6 +422,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Checklists/Checklists-Prefix.pch";
 				INFOPLIST_FILE = "Checklists/Checklists-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
