@@ -96,6 +96,14 @@
     
     return cell;
 }
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [items removeObjectAtIndex:indexPath.row];
+    
+    NSArray *indexPaths = [NSArray arrayWithObject:indexPath];
+    [tableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
+}
 #pragma mark - UITableView Delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -108,6 +116,22 @@
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
+
+
+- (IBAction)addItem
+{
+    int newRowIndex = [items count];
+    
+    ChecklistItem *item = [[ChecklistItem alloc] init];
+    item.text = @"I am a new row";
+    item.checked = YES;
+    [items addObject:item];
+    
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:newRowIndex inSection:0];
+    NSArray *indexPaths = [NSArray arrayWithObject:indexPath];
+    [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
 
 
 @end
