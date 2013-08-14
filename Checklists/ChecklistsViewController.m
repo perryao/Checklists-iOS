@@ -71,10 +71,12 @@
 
 - (void)configureCheckmarkForCell:(UITableViewCell *)cell withChecklistItem:(ChecklistItem *)item
 {
+    
+    UILabel *label = (UILabel *)[cell viewWithTag:1001];
     if (item.checked) {
-        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+       label.text = @"√";
     } else {
-        cell.accessoryType = UITableViewCellAccessoryNone;
+        label.text = @"";
     }
 }
 
@@ -117,19 +119,54 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
+{
+    ChecklistItem *item = [items objectAtIndex:indexPath.row];
+    [self performSegueWithIdentifier:@"EditItem" sender:item];
+}
 
-- (IBAction)addItem
+
+#pragma mark - ItemDetailViewControllerDelegate
+
+- (void)itemDetailViewControllerDidCancel:(ItemDetailViewController *)controller
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)itemDetailViewController:(ItemDetailViewController *)controller didFinishAddingItem:(ChecklistItem *)item
 {
     int newRowIndex = [items count];
-    
-    ChecklistItem *item = [[ChecklistItem alloc] init];
-    item.text = @"I am a new row";
-    item.checked = YES;
     [items addObject:item];
     
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:newRowIndex inSection:0];
     NSArray *indexPaths = [NSArray arrayWithObject:indexPath];
     [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)itemDetailViewController:(ItemDetailViewController *)controller didFinishEditingItem:(ChecklistItem *)item
+{
+    int index = [items indexOfObject:item];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+    [self configureTextForCell:cell withChecklistItem:item];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"AddItem"]) {
+        UINavigationController *navigationController = segue.destinationViewController;
+        ItemDetailViewController *controller = (ItemDetailViewController *)navigationController.topViewController;
+        controller.delegate = self;
+    }else if ([segue.identifier isEqualToString:@"EditItem"]) {
+        UINavigationController *navigationController = segue.destinationViewController;
+        ItemDetailViewController *controller = (ItemDetailViewController *)navigationController.topViewController;
+        controller.delegate = self;
+        controller.itemToEdit = sender;
+    }
 }
 
 

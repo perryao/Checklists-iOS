@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		27822AF317B353F700DA198D /* AddItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27822AF217B353F700DA198D /* AddItemViewController.m */; };
+		27822AF317B353F700DA198D /* ItemDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27822AF217B353F700DA198D /* ItemDetailViewController.m */; };
 		27AFBAC517B065D5001ECA2C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27AFBAC417B065D5001ECA2C /* Foundation.framework */; };
 		27AFBAC717B065D5001ECA2C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27AFBAC617B065D5001ECA2C /* CoreGraphics.framework */; };
 		27AFBAC917B065D5001ECA2C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27AFBAC817B065D5001ECA2C /* UIKit.framework */; };
@@ -36,8 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		27822AF117B353F700DA198D /* AddItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddItemViewController.h; sourceTree = "<group>"; };
-		27822AF217B353F700DA198D /* AddItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddItemViewController.m; sourceTree = "<group>"; };
+		27822AF117B353F700DA198D /* ItemDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemDetailViewController.h; sourceTree = "<group>"; };
+		27822AF217B353F700DA198D /* ItemDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemDetailViewController.m; sourceTree = "<group>"; };
 		27AFBAC117B065D5001ECA2C /* Checklists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Checklists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27AFBAC417B065D5001ECA2C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		27AFBAC617B065D5001ECA2C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -88,8 +88,8 @@
 		27822AF417B353FB00DA198D /* AddItemViewController */ = {
 			isa = PBXGroup;
 			children = (
-				27822AF117B353F700DA198D /* AddItemViewController.h */,
-				27822AF217B353F700DA198D /* AddItemViewController.m */,
+				27822AF117B353F700DA198D /* ItemDetailViewController.h */,
+				27822AF217B353F700DA198D /* ItemDetailViewController.m */,
 			);
 			name = AddItemViewController;
 			sourceTree = "<group>";
@@ -295,7 +295,7 @@
 				27AFBAD117B065D5001ECA2C /* main.m in Sources */,
 				27AFBAD517B065D5001ECA2C /* ChecklistsAppDelegate.m in Sources */,
 				27AFBADB17B065D5001ECA2C /* ChecklistsViewController.m in Sources */,
-				27822AF317B353F700DA198D /* AddItemViewController.m in Sources */,
+				27822AF317B353F700DA198D /* ItemDetailViewController.m in Sources */,
 				27AFBAFD17B076E1001ECA2C /* ChecklistItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,11 +419,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Checklists/Checklists-Prefix.pch";
 				INFOPLIST_FILE = "Checklists/Checklists-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -433,11 +436,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Checklists/Checklists-Prefix.pch";
 				INFOPLIST_FILE = "Checklists/Checklists-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
