@@ -1,19 +1,20 @@
 //
-//  ChecklistsViewController.m
+//  ChecklistViewController.m
 //  Checklists
 //
 //  Created by Mike Perry on 8/5/13.
 //  Copyright (c) 2013 Mike Perry. All rights reserved.
 //
 
-#import "ChecklistsViewController.h"
+#import "ChecklistViewController.h"
 #import "ChecklistItem.h"
+#import "Checklist.h"
 
-@interface ChecklistsViewController ()
+@interface ChecklistViewController ()
 
 @end
 
-@implementation ChecklistsViewController
+@implementation ChecklistViewController
 {
     NSMutableArray *items;
 }
@@ -66,6 +67,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
     NSLog(@"Documents folder is %@", [self documentsDirectory]);
     NSLog(@"Data file path is %@", [self dataFilePath]);
+    self.title = self.checklist.name;
 }
 
 - (void)didReceiveMemoryWarning
