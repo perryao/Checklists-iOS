@@ -25,6 +25,7 @@
 		27AFBAFD17B076E1001ECA2C /* ChecklistItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AFBAFC17B076E1001ECA2C /* ChecklistItem.m */; };
 		27BD21E117C31B33007E9599 /* AllListsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BD21E017C31B33007E9599 /* AllListsViewController.m */; };
 		27BD21E517C31D39007E9599 /* Checklist.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BD21E417C31D39007E9599 /* Checklist.m */; };
+		27C31BD817C45146000698DD /* ListDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C31BD717C45146000698DD /* ListDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,8 @@
 		27BD21E017C31B33007E9599 /* AllListsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllListsViewController.m; sourceTree = "<group>"; };
 		27BD21E317C31D39007E9599 /* Checklist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Checklist.h; path = ../Checklist.h; sourceTree = "<group>"; };
 		27BD21E417C31D39007E9599 /* Checklist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Checklist.m; path = ../Checklist.m; sourceTree = "<group>"; };
+		27C31BD617C45146000698DD /* ListDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListDetailViewController.h; sourceTree = "<group>"; };
+		27C31BD717C45146000698DD /* ListDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,9 +136,10 @@
 		27AFBACA17B065D5001ECA2C /* Checklists */ = {
 			isa = PBXGroup;
 			children = (
+				27AFBAFA17B066AF001ECA2C /* ChecklistsAppDelegate */,
 				27AFBAFE17B076EA001ECA2C /* Model */,
 				27BD21E217C31B38007E9599 /* AllListsViewController */,
-				27AFBAFA17B066AF001ECA2C /* ChecklistsAppDelegate */,
+				27C31BD917C4514A000698DD /* ListDetailViewController */,
 				27AFBAF917B066A3001ECA2C /* ChecklistsViewController */,
 				27822AF417B353FB00DA198D /* AddItemViewController */,
 				27AFBAD617B065D5001ECA2C /* Main.storyboard */,
@@ -210,6 +214,16 @@
 				27BD21E017C31B33007E9599 /* AllListsViewController.m */,
 			);
 			name = AllListsViewController;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		27C31BD917C4514A000698DD /* ListDetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				27C31BD617C45146000698DD /* ListDetailViewController.h */,
+				27C31BD717C45146000698DD /* ListDetailViewController.m */,
+			);
+			name = ListDetailViewController;
 			path = ..;
 			sourceTree = "<group>";
 		};
@@ -314,6 +328,7 @@
 				27AFBAD117B065D5001ECA2C /* main.m in Sources */,
 				27AFBAD517B065D5001ECA2C /* ChecklistsAppDelegate.m in Sources */,
 				27BD21E117C31B33007E9599 /* AllListsViewController.m in Sources */,
+				27C31BD817C45146000698DD /* ListDetailViewController.m in Sources */,
 				27AFBADB17B065D5001ECA2C /* ChecklistViewController.m in Sources */,
 				27822AF317B353F700DA198D /* ItemDetailViewController.m in Sources */,
 				27AFBAFD17B076E1001ECA2C /* ChecklistItem.m in Sources */,
