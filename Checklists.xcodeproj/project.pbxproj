@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		27822AF317B353F700DA198D /* ItemDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27822AF217B353F700DA198D /* ItemDetailViewController.m */; };
+		27921C6017D63F63003123F9 /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 27921C5F17D63F63003123F9 /* DataModel.m */; };
 		27AFBAC517B065D5001ECA2C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27AFBAC417B065D5001ECA2C /* Foundation.framework */; };
 		27AFBAC717B065D5001ECA2C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27AFBAC617B065D5001ECA2C /* CoreGraphics.framework */; };
 		27AFBAC917B065D5001ECA2C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27AFBAC817B065D5001ECA2C /* UIKit.framework */; };
@@ -41,6 +42,8 @@
 /* Begin PBXFileReference section */
 		27822AF117B353F700DA198D /* ItemDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemDetailViewController.h; sourceTree = "<group>"; };
 		27822AF217B353F700DA198D /* ItemDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemDetailViewController.m; sourceTree = "<group>"; };
+		27921C5E17D63F62003123F9 /* DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataModel.h; path = ../DataModel.h; sourceTree = "<group>"; };
+		27921C5F17D63F63003123F9 /* DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataModel.m; path = ../DataModel.m; sourceTree = "<group>"; };
 		27AFBAC117B065D5001ECA2C /* Checklists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Checklists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27AFBAC417B065D5001ECA2C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		27AFBAC617B065D5001ECA2C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -199,6 +202,8 @@
 		27AFBAFE17B076EA001ECA2C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				27921C5E17D63F62003123F9 /* DataModel.h */,
+				27921C5F17D63F63003123F9 /* DataModel.m */,
 				27BD21E317C31D39007E9599 /* Checklist.h */,
 				27BD21E417C31D39007E9599 /* Checklist.m */,
 				27AFBAFB17B076E1001ECA2C /* ChecklistItem.h */,
@@ -327,6 +332,7 @@
 			files = (
 				27AFBAD117B065D5001ECA2C /* main.m in Sources */,
 				27AFBAD517B065D5001ECA2C /* ChecklistsAppDelegate.m in Sources */,
+				27921C6017D63F63003123F9 /* DataModel.m in Sources */,
 				27BD21E117C31B33007E9599 /* AllListsViewController.m in Sources */,
 				27C31BD817C45146000698DD /* ListDetailViewController.m in Sources */,
 				27AFBADB17B065D5001ECA2C /* ChecklistViewController.m in Sources */,
